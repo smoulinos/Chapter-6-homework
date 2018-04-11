@@ -1,0 +1,31 @@
+prefixes = "JKLMNOPQ"
+suffix = "ack"
+
+for letter in prefixes:
+    if letter == "O" or letter == "Q":
+        print(letter + "u" + suffix)
+    else:
+        print(letter + suffix)
+
+def remove_letter(letter, word):
+    new = ""
+    for ch in word:
+        if ch != letter:
+            new += ch
+    return new
+
+remove_letter("a", "apple")
+
+def reverse(word):
+    newword = ""
+    for i in range(len(word)):
+        newword += word[len(word)-i-1]
+    return newword
+
+
+
+def mirror(word):
+    return word + reverse(word)
+
+
+print(mirror("dog"))
